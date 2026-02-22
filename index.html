@@ -693,7 +693,7 @@ async function submitEmail() {
   const email = document.getElementById("email-input").value.trim();
   if (!email || !email.includes("@")) return alert("Please enter a valid email.");
   try {
-    await fetch(FIREBASE_DB + "/subscribers/" + SITE_KEY + ".json", {
+    await fetch(FIREBASE_DB + "/waitlist/" + SITE_KEY + ".json", {
       method: "POST",
       body: JSON.stringify({ email: email, date: new Date().toISOString(), source: "plush.wiki" })
     });
