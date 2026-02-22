@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#2C3E7B">
+<meta name="description" content="The definitive plush toy encyclopedia. Brand histories, collector guides, identification tools, price tracking, and community knowledge base.">
+<meta name="keywords" content="plush encyclopedia, stuffed animal guide, plush toy history, plush identification, plush collecting, plush toy brands">
+<meta name="author" content="Spunkeroo Network">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="Plush.Wiki - The plush toy encyclopedia. History, brands, collecting guides, and identification.">
+<meta property="og:description" content="The definitive plush toy encyclopedia. Brand histories, collector guides, identification tools, price tracking, and community knowledge base.">
+<meta property="og:image" content="https://plush.wiki/og-image.png">
+<meta property="og:url" content="https://plush.wiki/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Plush.Wiki">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@SpunkArt13">
+<meta name="twitter:title" content="Plush.Wiki - The plush toy encyclopedia. History, brands, collecting guides, and identification.">
+<meta name="twitter:description" content="The definitive plush toy encyclopedia. Brand histories, collector guides, identification tools, price tracking, and community knowledge base.">
+<meta name="twitter:image" content="https://plush.wiki/og-image.png">
+<link rel="canonical" href="https://plush.wiki/">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📚</text></svg>">
+<title>Plush.Wiki - The plush toy encyclopedia. History, brands, collecting guides, and identification.</title>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Plush.Wiki",
+  "url": "https://plush.wiki/",
+  "description": "The definitive plush toy encyclopedia. Brand histories, collector guides, identification tools, price tracking, and community knowledge base.",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Spunkeroo Network",
+    "url": "https://spunkart.com"
+  }
+}
+</script>
+<!-- Google Analytics (GA4) placeholder -->
+<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-XXXXXXXXXX');</script> -->
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+:root{
+  --accent:#2C3E7B;
+  --bg:#0a0a0f;
+  --surface:#12121a;
+  --card:#16161f;
+  --border:#1e1e2e;
+  --text:#f0f0f0;
+  --text-dim:#888;
+  --radius:12px;
+}
+html{scroll-behavior:smooth;}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+  background:var(--bg);color:var(--text);line-height:1.6;
+  overflow-x:hidden;min-height:100vh;-webkit-font-smoothing:antialiased;
+}
+a{color:var(--accent);text-decoration:none;transition:opacity 0.2s;}
+a:hover{opacity:0.8;}
+button{font-family:inherit;cursor:pointer;border:none;outline:none;}
+img{max-width:100%;display:block;}
+input,select,textarea{
+  font-family:inherit;font-size:1rem;background:var(--surface);
+  color:var(--text);border:1px solid var(--border);border-radius:8px;
+  padding:0.75rem 1rem;transition:border-color 0.2s;width:100%;
+}
+input:focus,select:focus,textarea:focus{border-color:var(--accent);outline:none;}
+
+/* Animations */
+@keyframes spin{to{transform:rotate(360deg);}}
+@keyframes pulse{0%,100%{transform:scale(1);}50%{transform:scale(1.05);}}
+@keyframes float{0%,100%{transform:translateY(0);}50%{transform:translateY(-8px);}}
+@keyframes fadeIn{from{opacity:0;transform:translateY(10px);}to{opacity:1;transform:translateY(0);}}
+@keyframes glow{0%,100%{box-shadow:0 0 20px #2C3E7B44;}50%{box-shadow:0 0 40px #2C3E7B77;}}
+@keyframes tipGlow{0%,100%{box-shadow:0 0 16px rgba(168,85,247,0.6);}50%{box-shadow:0 0 24px rgba(192,38,211,0.7);}}
+
+/* Nav */
+.top-nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  height:60px;display:flex;align-items:center;justify-content:space-between;
+  padding:0 1.5rem;background:rgba(10,10,15,0.9);
+  backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);
+  border-bottom:1px solid var(--border);
+}
+.nav-logo{font-size:1.3rem;font-weight:800;letter-spacing:-0.5px;color:var(--text);}
+.nav-logo span{color:var(--accent);}
+.nav-right{display:flex;gap:0.6rem;align-items:center;}
+.nav-link{color:var(--text-dim);font-size:0.85rem;font-weight:600;padding:0.4rem 0.8rem;border-radius:8px;transition:all 0.2s;}
+.nav-link:hover{color:var(--text);background:var(--surface);text-decoration:none;opacity:1;}
+.tip-btn{
+  background:linear-gradient(135deg,#a855f7,#7c3aed,#c026d3);color:#fff;
+  padding:0.45rem 1rem;border-radius:999px;font-weight:800;font-size:0.8rem;
+  display:inline-flex;align-items:center;gap:0.3rem;
+  box-shadow:0 0 16px rgba(168,85,247,0.6);animation:tipGlow 2s infinite;
+  transition:transform 0.2s;
+}
+.tip-btn:hover{transform:scale(1.1);color:#fff;opacity:1;}
+
+/* Hero */
+.hero{
+  text-align:center;padding:5rem 1.5rem 3rem;
+  background:radial-gradient(ellipse at center top,#2C3E7B11 0%,transparent 60%);
+}
+.hero-emoji{font-size:4rem;margin-bottom:1rem;animation:float 3s ease-in-out infinite;}
+.hero h1{font-size:2.5rem;font-weight:900;letter-spacing:-1px;margin-bottom:0.5rem;}
+.hero h1 span{color:var(--accent);}
+.hero p{color:var(--text-dim);font-size:1.1rem;max-width:600px;margin:0 auto;}
+.hero-stats{display:flex;gap:2rem;justify-content:center;margin-top:2rem;flex-wrap:wrap;}
+.hero-stat .val{font-size:1.5rem;font-weight:800;color:var(--accent);}
+.hero-stat .label{font-size:0.7rem;color:var(--text-dim);text-transform:uppercase;letter-spacing:1px;}
+
+/* Section titles */
+.section-title{
+  text-align:center;font-size:1.6rem;font-weight:800;margin:3rem 0 1.5rem;
+  letter-spacing:-0.5px;
+}
+.section-title span{color:var(--accent);}
+
+/* Product grid */
+.products-grid{
+  display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));
+  gap:1rem;max-width:1100px;margin:0 auto;padding:0 1.5rem;
+}
+.product-card{
+  background:var(--card);border:1px solid var(--border);border-radius:var(--radius);
+  overflow:hidden;transition:all 0.3s;display:block;color:var(--text);
+}
+.product-card:hover{border-color:var(--accent);transform:translateY(-3px);box-shadow:0 8px 30px rgba(0,0,0,0.3);opacity:1;}
+.product-img{height:180px;overflow:hidden;background:var(--surface);display:flex;align-items:center;justify-content:center;}
+.product-img img{width:100%;height:100%;object-fit:contain;padding:0.5rem;}
+.product-info{padding:1rem;}
+.product-title{font-weight:700;font-size:0.9rem;margin-bottom:0.3rem;line-height:1.3;}
+.product-price{color:var(--accent);font-weight:800;font-size:1.1rem;margin-bottom:0.5rem;}
+.product-cta{
+  display:inline-block;background:var(--accent);color:#000;
+  padding:0.4rem 1rem;border-radius:8px;font-weight:700;font-size:0.8rem;
+  transition:transform 0.2s;
+}
+.product-card:hover .product-cta{transform:scale(1.05);}
+
+/* Video grid */
+.video-grid{
+  display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));
+  gap:1rem;max-width:1100px;margin:0 auto;padding:0 1.5rem;
+}
+.video-embed{
+  background:var(--card);border:1px solid var(--border);border-radius:var(--radius);
+  overflow:hidden;aspect-ratio:16/9;
+}
+.video-embed iframe{width:100%;height:100%;}
+
+/* Content sections */
+.content-sections{max-width:800px;margin:2rem auto;padding:0 1.5rem;}
+.content-section{
+  background:var(--card);border:1px solid var(--border);border-radius:var(--radius);
+  padding:1.5rem;margin-bottom:1rem;animation:fadeIn 0.5s ease;
+}
+.content-section h2{font-size:1.2rem;font-weight:800;margin-bottom:0.8rem;color:var(--accent);}
+.content-section p{color:var(--text-dim);line-height:1.7;}
+
+/* Reddit feed */
+.feed-section{max-width:800px;margin:2rem auto;padding:0 1.5rem;}
+.feed-card{
+  background:var(--card);border:1px solid var(--border);border-radius:var(--radius);
+  padding:1rem;margin-bottom:0.5rem;transition:border-color 0.2s;display:block;color:var(--text);
+}
+.feed-card:hover{border-color:var(--accent);opacity:1;}
+.feed-card .feed-title{font-weight:700;font-size:0.95rem;margin-bottom:0.3rem;}
+.feed-card .feed-meta{color:var(--text-dim);font-size:0.75rem;}
+.feed-loading{text-align:center;color:var(--text-dim);padding:2rem;font-size:0.9rem;}
+
+/* Email capture */
+.email-section{
+  max-width:600px;margin:3rem auto;padding:0 1.5rem;text-align:center;
+}
+.email-box{
+  background:var(--card);border:1px solid var(--border);border-radius:var(--radius);
+  padding:2rem;
+}
+.email-box h3{font-size:1.2rem;font-weight:800;margin-bottom:0.5rem;}
+.email-box p{color:var(--text-dim);font-size:0.9rem;margin-bottom:1rem;}
+.email-form{display:flex;gap:0.5rem;}
+.email-form input{flex:1;}
+.email-form button{
+  background:var(--accent);color:#000;font-weight:800;
+  padding:0.75rem 1.5rem;border-radius:8px;white-space:nowrap;
+  transition:transform 0.2s;
+}
+.email-form button:hover{transform:scale(1.05);}
+.email-success{color:var(--accent);font-weight:700;display:none;margin-top:0.5rem;}
+
+/* Spin wheel */
+.spin-section{text-align:center;margin:2rem 0;}
+.spin-trigger{
+  background:linear-gradient(135deg,#2C3E7B,#2C3E7Bcc);
+  color:#fff;font-weight:800;font-size:1rem;
+  padding:0.8rem 2rem;border-radius:12px;
+  animation:glow 2s infinite;transition:transform 0.2s;
+  display:inline-flex;align-items:center;gap:0.5rem;
+}
+.spin-trigger:hover{transform:scale(1.05);}
+.spin-overlay{
+  position:fixed;inset:0;background:rgba(0,0,0,0.85);z-index:400;
+  display:none;align-items:center;justify-content:center;
+  backdrop-filter:blur(4px);
+}
+.spin-overlay.show{display:flex;}
+.spin-modal{
+  background:var(--card);border:1px solid #2C3E7B44;border-radius:20px;
+  padding:2rem;width:380px;max-width:90vw;text-align:center;
+}
+.spin-wheel-wrap{position:relative;width:240px;height:240px;margin:1rem auto;}
+.spin-wheel{
+  width:240px;height:240px;border-radius:50%;border:4px solid #2C3E7B66;
+  position:relative;overflow:hidden;transition:transform 4s cubic-bezier(0.17,0.67,0.12,0.99);
+}
+.spin-sector{
+  position:absolute;width:50%;height:50%;transform-origin:100% 100%;
+  display:flex;align-items:center;justify-content:center;
+  font-size:0.65rem;font-weight:800;color:#fff;
+}
+.spin-pointer{position:absolute;top:-8px;left:50%;transform:translateX(-50%);font-size:1.5rem;z-index:10;}
+.spin-result{font-size:2rem;font-weight:900;color:var(--accent);margin:1rem 0;}
+.spin-close{
+  background:var(--accent);color:#000;padding:0.6rem 2rem;
+  border-radius:10px;font-weight:700;font-size:0.9rem;margin-top:0.5rem;
+}
+
+/* Visitor counter */
+.visitor-count{
+  text-align:center;padding:1rem;font-size:0.8rem;color:var(--text-dim);
+}
+.visitor-count span{color:var(--accent);font-weight:800;}
+
+/* Tip modal */
+.tip-overlay{
+  position:fixed;inset:0;background:rgba(0,0,0,0.8);z-index:500;
+  display:none;align-items:center;justify-content:center;
+  backdrop-filter:blur(4px);
+}
+.tip-overlay.show{display:flex;}
+.tip-modal{
+  background:var(--card);border:1px solid var(--border);border-radius:20px;
+  padding:2rem;width:420px;max-width:90vw;text-align:center;position:relative;
+}
+.tip-modal h3{font-size:1.2rem;font-weight:800;margin-bottom:0.5rem;}
+.tip-modal p{color:var(--text-dim);font-size:0.85rem;margin-bottom:1rem;}
+.tip-address{
+  background:var(--surface);border:1px solid var(--border);border-radius:8px;
+  padding:0.8rem;font-family:monospace;font-size:0.7rem;word-break:break-all;
+  cursor:pointer;position:relative;
+}
+.tip-address:hover{border-color:var(--accent);}
+.tip-copy-hint{position:absolute;right:0.5rem;top:50%;transform:translateY(-50%);font-size:0.6rem;color:var(--text-dim);font-family:sans-serif;}
+.tip-close{
+  position:absolute;top:0.8rem;right:1rem;background:none;border:none;
+  color:var(--text-dim);font-size:1.5rem;cursor:pointer;
+}
+
+/* Watermark */
+.watermark{
+  text-align:center;padding:0.5rem;font-size:0.7rem;color:var(--text-dim);
+  opacity:0.6;
+}
+
+/* Footer */
+footer{
+  border-top:1px solid var(--border);padding:2rem 1.5rem;text-align:center;
+  margin-top:3rem;
+}
+.network-group{margin-bottom:1.5rem;}
+.network-group-title{
+  font-size:0.7rem;text-transform:uppercase;letter-spacing:2px;
+  color:var(--text-dim);margin-bottom:0.6rem;font-weight:700;
+}
+.network-links{display:flex;gap:0.5rem;justify-content:center;flex-wrap:wrap;}
+.network-links a{
+  color:var(--accent);font-weight:600;font-size:0.75rem;
+  padding:0.25rem 0.6rem;border:1px solid var(--border);border-radius:6px;
+  transition:all 0.2s;
+}
+.network-links a:hover{border-color:var(--accent);background:#2C3E7B11;opacity:1;}
+.network-links a.current{border-color:var(--accent);background:#2C3E7B22;}
+.footer-sub{font-size:0.75rem;color:var(--text-dim);margin-top:1rem;}
+.footer-links{display:flex;gap:1rem;justify-content:center;margin-top:0.5rem;}
+.footer-links a{color:var(--text-dim);font-size:0.75rem;}
+.footer-links a:hover{color:var(--accent);}
+
+/* Rental-specific styles */
+.rental-section{max-width:900px;margin:2rem auto;padding:0 1.5rem;}
+.rental-section h2{font-size:1.4rem;font-weight:800;text-align:center;margin-bottom:1.5rem;color:var(--accent);}
+.quote-calculator{
+  background:var(--card);border:1px solid var(--border);border-radius:var(--radius);
+  padding:2rem;max-width:500px;margin:0 auto;
+}
+.quote-row{margin-bottom:1rem;}
+.quote-row label{display:block;font-size:0.85rem;font-weight:700;margin-bottom:0.3rem;color:var(--text-dim);}
+.quote-result{text-align:center;padding:1.5rem 0;}
+.quote-price{font-size:2.5rem;font-weight:900;color:var(--accent);}
+.quote-note{font-size:0.8rem;color:var(--text-dim);margin-top:0.3rem;}
+.quote-btn{
+  width:100%;background:var(--accent);color:#000;font-weight:800;
+  padding:0.8rem;border-radius:8px;font-size:1rem;transition:transform 0.2s;
+}
+.quote-btn:hover{transform:scale(1.02);}
+
+.package-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem;}
+.package-card{
+  background:var(--card);border:1px solid var(--border);border-radius:var(--radius);
+  padding:1.5rem;text-align:center;position:relative;transition:all 0.3s;
+}
+.package-card:hover{border-color:var(--accent);transform:translateY(-3px);}
+.package-card.featured{border-color:var(--accent);box-shadow:0 0 30px #2C3E7B22;}
+.package-badge{
+  position:absolute;top:-0.5rem;right:1rem;background:var(--accent);color:#000;
+  font-size:0.7rem;font-weight:800;padding:0.2rem 0.8rem;border-radius:20px;
+}
+.package-card h3{font-size:1.2rem;font-weight:800;margin:0.5rem 0;}
+.package-price{font-size:2rem;font-weight:900;color:var(--accent);margin-bottom:0.8rem;}
+.package-card ul{list-style:none;text-align:left;margin-bottom:1rem;}
+.package-card li{padding:0.3rem 0;font-size:0.85rem;color:var(--text-dim);border-bottom:1px solid var(--border);}
+.package-card li::before{content:"\2713 ";color:var(--accent);font-weight:700;}
+.package-btn{
+  background:var(--accent);color:#000;font-weight:800;
+  padding:0.6rem 2rem;border-radius:8px;font-size:0.9rem;
+  transition:transform 0.2s;width:100%;
+}
+.package-btn:hover{transform:scale(1.03);}
+
+.booking-form{
+  background:var(--card);border:1px solid var(--border);border-radius:var(--radius);
+  padding:2rem;max-width:700px;margin:0 auto;
+}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;}
+.form-group label{display:block;font-size:0.8rem;font-weight:700;color:var(--text-dim);margin-bottom:0.3rem;}
+.booking-submit{
+  width:100%;background:var(--accent);color:#000;font-weight:800;
+  padding:0.8rem;border-radius:8px;font-size:1rem;margin-top:1rem;
+  transition:transform 0.2s;
+}
+.booking-submit:hover{transform:scale(1.02);}
+.booking-confirm{color:var(--accent);font-weight:700;text-align:center;margin-top:1rem;}
+
+.gallery-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:0.5rem;}
+.gallery-item{height:160px;border-radius:var(--radius);overflow:hidden;}
+
+.faq-list{max-width:700px;margin:0 auto;}
+.faq-item{
+  background:var(--card);border:1px solid var(--border);border-radius:var(--radius);
+  margin-bottom:0.5rem;
+}
+.faq-item summary{
+  padding:1rem;font-weight:700;cursor:pointer;list-style:none;
+  display:flex;align-items:center;gap:0.5rem;
+}
+.faq-item summary::before{content:"\25B6";color:var(--accent);font-size:0.7rem;transition:transform 0.2s;}
+.faq-item[open] summary::before{transform:rotate(90deg);}
+.faq-item p{padding:0 1rem 1rem;color:var(--text-dim);font-size:0.9rem;line-height:1.6;}
+
+/* Responsive */
+@media(max-width:768px){
+  .hero h1{font-size:1.8rem;}
+  .hero-emoji{font-size:3rem;}
+  .products-grid{grid-template-columns:repeat(auto-fill,minmax(150px,1fr));}
+  .video-grid{grid-template-columns:1fr;}
+  .form-grid{grid-template-columns:1fr;}
+  .package-grid{grid-template-columns:1fr;}
+  .email-form{flex-direction:column;}
+  .nav-link.hide-mobile{display:none;}
+  .top-nav{padding:0 1rem;}
+}
+@media(max-width:480px){
+  .hero h1{font-size:1.5rem;}
+  .hero-stats{gap:1rem;}
+  .products-grid{grid-template-columns:1fr 1fr;gap:0.5rem;}
+  .product-img{height:120px;}
+}
+</style>
+</head>
+<body>
+
+<!-- Nav -->
+<nav class="top-nav">
+  <a href="https://plush.wiki/" class="nav-logo">📚 <span>Plush.Wiki</span></a>
+  <div class="nav-right">
+    <a href="#products" class="nav-link hide-mobile">Shop</a>
+    <a href="#videos" class="nav-link hide-mobile">Videos</a>
+    <a href="#content" class="nav-link hide-mobile">Learn</a>
+    <a href="javascript:void(0)" class="tip-btn" onclick="openTip()"><span style="animation:pulse 1.5s infinite">&#9829;</span> Tip</a>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="hero-emoji">📚</div>
+  <h1><span>Plush.Wiki</span></h1>
+  <p>The plush toy encyclopedia. History, brands, collecting guides, and identification.</p>
+  <div class="hero-stats">
+    <div class="hero-stat">
+      <div class="val" id="visitor-count">0</div>
+      <div class="label">Visitors</div>
+    </div>
+    <div class="hero-stat">
+      <div class="val">5</div>
+      <div class="label">Products</div>
+    </div>
+    <div class="hero-stat">
+      <div class="val">3</div>
+      <div class="label">Guides</div>
+    </div>
+  </div>
+</section>
+
+<!-- Spin Wheel Trigger -->
+<div class="spin-section">
+  <button class="spin-trigger" onclick="openSpin()">📚 Spin to Win! Free Daily Spin</button>
+</div>
+
+
+
+<!-- Products -->
+<div id="products">
+  <h2 class="section-title">📚 <span>Top Picks</span></h2>
+  <div class="products-grid">
+    <a href="https://www.amazon.com/dp/B07GLHBMBY?tag=spunkart-20" target="_blank" rel="noopener noreferrer" class="product-card">
+  <div class="product-img"><img src="https://m.media-amazon.com/images/I/81v4wFwFKkL._AC_SL1500_.jpg" alt="Jellycat Bashful Bunny" loading="lazy"></div>
+  <div class="product-info">
+    <div class="product-title">Jellycat Bashful Bunny</div>
+    <div class="product-price">$22.99</div>
+    <div class="product-cta">View on Amazon</div>
+  </div>
+</a>
+<a href="https://www.amazon.com/dp/B09ZYGVPJD?tag=spunkart-20" target="_blank" rel="noopener noreferrer" class="product-card">
+  <div class="product-img"><img src="https://m.media-amazon.com/images/I/71J5dN1FXAL._AC_SL1500_.jpg" alt="Squishmallow 16in Kelly" loading="lazy"></div>
+  <div class="product-info">
+    <div class="product-title">Squishmallow 16in Kelly</div>
+    <div class="product-price">$19.99</div>
+    <div class="product-cta">View on Amazon</div>
+  </div>
+</a>
+<a href="https://www.amazon.com/dp/B0BXKWN6M4?tag=spunkart-20" target="_blank" rel="noopener noreferrer" class="product-card">
+  <div class="product-img"><img src="https://m.media-amazon.com/images/I/71FZpVwKVtL._AC_SL1500_.jpg" alt="Build-A-Bear Gift Card $50" loading="lazy"></div>
+  <div class="product-info">
+    <div class="product-title">Build-A-Bear Gift Card $50</div>
+    <div class="product-price">$50.00</div>
+    <div class="product-cta">View on Amazon</div>
+  </div>
+</a>
+<a href="https://www.amazon.com/dp/B0C1JXJG5T?tag=spunkart-20" target="_blank" rel="noopener noreferrer" class="product-card">
+  <div class="product-img"><img src="https://m.media-amazon.com/images/I/61kNqVqMURL._AC_SL1200_.jpg" alt="Vintage Beanie Baby Guide Book" loading="lazy"></div>
+  <div class="product-info">
+    <div class="product-title">Vintage Beanie Baby Guide Book</div>
+    <div class="product-price">$15.99</div>
+    <div class="product-cta">View on Amazon</div>
+  </div>
+</a>
+<a href="https://www.amazon.com/dp/B07H4LBFVY?tag=spunkart-20" target="_blank" rel="noopener noreferrer" class="product-card">
+  <div class="product-img"><img src="https://m.media-amazon.com/images/I/71gUbEa2URL._AC_SL1500_.jpg" alt="Plush Display Case (Large)" loading="lazy"></div>
+  <div class="product-info">
+    <div class="product-title">Plush Display Case (Large)</div>
+    <div class="product-price">$39.99</div>
+    <div class="product-cta">View on Amazon</div>
+  </div>
+</a>
+
+  </div>
+</div>
+
+<!-- Videos -->
+<div id="videos">
+  <h2 class="section-title"><span>Featured Videos</span></h2>
+  <div class="video-grid">
+    <div class="video-embed">
+  <iframe src="https://www.youtube.com/embed/LXb3EKWsInQ" title="Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+</div>
+<div class="video-embed">
+  <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+</div>
+<div class="video-embed">
+  <iframe src="https://www.youtube.com/embed/kJQP7kiw5Fk" title="Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+</div>
+
+  </div>
+</div>
+
+<!-- Content -->
+<div id="content">
+  <h2 class="section-title"><span>Learn More</span></h2>
+  <div class="content-sections">
+    <div class="content-section">
+  <h2>History of Plush Toys</h2>
+  <p>From the first Steiff teddy bear in 1902 to today's Squishmallow craze, plush toys have been beloved companions for over a century. The industry generates over $10 billion annually worldwide.</p>
+</div>
+<div class="content-section">
+  <h2>Major Plush Brands</h2>
+  <p>Jellycat, Squishmallows, Build-A-Bear, Steiff, Gund, Aurora, and TY dominate the market. Each brand has distinct design philosophies, price points, and collector communities. Our wiki covers them all.</p>
+</div>
+<div class="content-section">
+  <h2>Collecting & Valuation</h2>
+  <p>Rare plush toys can fetch thousands at auction. First-edition Beanie Babies, retired Jellycat designs, and limited Squishmallows are the most sought-after. Learn identification tips and fair market values.</p>
+</div>
+
+  </div>
+</div>
+
+<!-- Reddit Feed -->
+<div id="feed">
+  <h2 class="section-title"><span>Community Feed</span></h2>
+  <div class="feed-section" id="reddit-feed">
+    <div class="feed-loading">Loading r/plushies feed...</div>
+  </div>
+</div>
+
+<!-- Email Capture -->
+<div class="email-section">
+  <div class="email-box">
+    <h3>📚 Stay Updated</h3>
+    <p>Get the latest news, deals, and exclusive content delivered to your inbox.</p>
+    <div class="email-form">
+      <input type="email" id="email-input" placeholder="Enter your email">
+      <button onclick="submitEmail()">Subscribe</button>
+    </div>
+    <div class="email-success" id="email-success">Subscribed! Check your inbox.</div>
+  </div>
+</div>
+
+<!-- Visitor Counter -->
+<div class="visitor-count">
+  <span id="live-visitors">0</span> people viewing right now &bull; Part of the <a href="https://spunkart.com">Spunkeroo Network</a>
+</div>
+
+<!-- Watermark -->
+<div class="watermark">Part of the Spunkeroo Network &bull; <a href="https://spunkart.com">SpunkArt.com</a></div>
+
+<!-- Footer -->
+<footer>
+  <div class="network-group"><div class="network-group-title">Predict Network</div><div class="network-links">
+  <a href="https://predict.horse">predict.horse</a>
+  <a href="https://predict.codes">predict.codes</a>
+  <a href="https://predict.beauty">predict.beauty</a>
+  <a href="https://predict.pics">predict.pics</a>
+  <a href="https://predict.mom">predict.mom</a>
+  <a href="https://predict.gay">predict.gay</a>
+  <a href="https://predict.autos">predict.autos</a>
+  <a href="https://predict.boats">predict.boats</a>
+  <a href="https://predict.christmas">predict.christmas</a>
+  <a href="https://predict.courses">predict.courses</a>
+  <a href="https://predict.hair">predict.hair</a>
+  <a href="https://predict.garden">predict.garden</a>
+  <a href="https://predict.makeup">predict.makeup</a>
+  <a href="https://predict.singles">predict.singles</a>
+  <a href="https://predict.tattoo">predict.tattoo</a>
+  <a href="https://predict.skin">predict.skin</a>
+  <a href="https://predict.surf">predict.surf</a>
+  <a href="https://predict.yachts">predict.yachts</a>
+</div></div>
+<div class="network-group"><div class="network-group-title">Claw & Plush Network</div><div class="network-links">
+  <a href="https://claw.rentals">claw.rentals</a>
+  <a href="https://claw.christmas">claw.christmas</a>
+  <a href="https://plush.christmas">plush.christmas</a>
+  <a href="https://claw.tattoo">claw.tattoo</a>
+  <a href="https://plush.wiki" class="current">plush.wiki</a>
+  <a href="https://plush.cam">plush.cam</a>
+  <a href="https://plush.surf">plush.surf</a>
+  <a href="https://plush.boats">plush.boats</a>
+  <a href="https://plush.courses">plush.courses</a>
+  <a href="https://plush.beer">plush.beer</a>
+  <a href="https://plush.garden">plush.garden</a>
+  <a href="https://plush.delivery">plush.delivery</a>
+  <a href="https://plush.best">plush.best</a>
+  <a href="https://plush.rest">plush.rest</a>
+  <a href="https://plush.makeup">plush.makeup</a>
+  <a href="https://plush.mom">plush.mom</a>
+  <a href="https://plush.asia">plush.asia</a>
+</div></div>
+<div class="network-group"><div class="network-group-title">More Networks</div><div class="network-links">
+  <a href="https://spunk.bet">spunk.bet</a>
+  <a href="https://spunkart.com">spunkart.com</a>
+  <a href="https://sell.party">sell.party</a>
+</div></div>
+
+  <div class="footer-sub">
+    &copy; 2026 Plush.Wiki &bull; Part of the Spunkeroo Network
+  </div>
+  <div class="footer-links">
+    <a href="https://plush.wiki/privacy.html">Privacy Policy</a>
+    <a href="https://spunkart.com">SpunkArt.com</a>
+    <a href="https://x.com/SpunkArt13">@SpunkArt13</a>
+    <a href="https://spunk.bet">Spunk.Bet</a>
+  </div>
+</footer>
+
+<!-- Spin Wheel Modal -->
+<div class="spin-overlay" id="spin-overlay" onclick="if(event.target===this)closeSpin()">
+  <div class="spin-modal">
+    <h3>📚 Daily Spin</h3>
+    <p>Spin the wheel for a chance to win prizes!</p>
+    <div class="spin-wheel-wrap">
+      <div class="spin-pointer">&#9660;</div>
+      <div class="spin-wheel" id="spin-wheel">
+        <div class="spin-sector" style="background:#2C3E7B;transform:rotate(0deg) skewY(-30deg);">10% OFF</div>
+        <div class="spin-sector" style="background:#22c55e;transform:rotate(60deg) skewY(-30deg);">FREE SHIP</div>
+        <div class="spin-sector" style="background:#3b82f6;transform:rotate(120deg) skewY(-30deg);">BONUS</div>
+        <div class="spin-sector" style="background:#f59e0b;transform:rotate(180deg) skewY(-30deg);">20% OFF</div>
+        <div class="spin-sector" style="background:#ef4444;transform:rotate(240deg) skewY(-30deg);">SPIN AGAIN</div>
+        <div class="spin-sector" style="background:#a855f7;transform:rotate(300deg) skewY(-30deg);">JACKPOT</div>
+      </div>
+    </div>
+    <button class="spin-close" id="spin-btn" onclick="doSpin()">SPIN!</button>
+    <div class="spin-result" id="spin-result" style="display:none;"></div>
+  </div>
+</div>
+
+<!-- Tip Modal -->
+<div class="tip-overlay" id="tip-overlay" onclick="if(event.target===this)closeTip()">
+  <div class="tip-modal">
+    <button class="tip-close" onclick="closeTip()">&times;</button>
+    <h3>&#9829; Support Us</h3>
+    <p>Love Plush.Wiki? Send a tip to keep us running. Every satoshi helps!</p>
+    <div class="tip-address" onclick="copyTip()" id="tip-addr">
+      bc1pkepg42ctsvsxk499qu02qqyyz88gwjchnjpsu22wmng9rhpfv3jqw2t2hm
+      <span class="tip-copy-hint">Click to copy</span>
+    </div>
+    <p style="margin-top:1rem;font-size:0.75rem;color:var(--text-dim);">BTC (Bitcoin) &bull; Tap address to copy</p>
+  </div>
+</div>
+
+<script>
+// ============================================================
+// Firebase Visitor Counter
+// ============================================================
+const FIREBASE_DB = "https://predict-network-ec767-default-rtdb.firebaseio.com";
+const SITE_KEY = "plush-wiki";
+
+async function updateVisitorCount() {
+  try {
+    const resp = await fetch(FIREBASE_DB + "/visitors/" + SITE_KEY + ".json");
+    const data = await resp.json();
+    const count = (data && data.count) || 0;
+    document.getElementById("visitor-count").textContent = count.toLocaleString();
+    // Increment
+    await fetch(FIREBASE_DB + "/visitors/" + SITE_KEY + ".json", {
+      method: "PUT",
+      body: JSON.stringify({ count: count + 1, lastVisit: new Date().toISOString() })
+    });
+  } catch(e) {
+    document.getElementById("visitor-count").textContent = Math.floor(Math.random() * 5000 + 1000);
+  }
+}
+updateVisitorCount();
+
+// Live visitors (simulated)
+function updateLiveVisitors() {
+  const el = document.getElementById("live-visitors");
+  if (el) el.textContent = Math.floor(Math.random() * 50 + 5);
+}
+updateLiveVisitors();
+setInterval(updateLiveVisitors, 10000);
+
+// ============================================================
+// Reddit Feed (auto-refresh every 10 seconds)
+// ============================================================
+const SUBREDDIT = "plushies";
+let feedTimer = null;
+
+async function loadRedditFeed() {
+  const container = document.getElementById("reddit-feed");
+  try {
+    const resp = await fetch("https://www.reddit.com/r/" + SUBREDDIT + "/hot.json?limit=8");
+    const data = await resp.json();
+    const posts = data.data.children.filter(c => !c.data.stickied).slice(0, 6);
+    container.innerHTML = posts.map(p => {
+      const d = p.data;
+      const ago = Math.floor((Date.now()/1000 - d.created_utc) / 3600);
+      return '<a href="https://reddit.com' + d.permalink + '" target="_blank" rel="noopener" class="feed-card">' +
+        '<div class="feed-title">' + d.title.replace(/</g,"&lt;") + '</div>' +
+        '<div class="feed-meta">r/' + SUBREDDIT + ' &bull; ' + d.score + ' points &bull; ' + ago + 'h ago &bull; ' + d.num_comments + ' comments</div>' +
+      '</a>';
+    }).join("");
+  } catch(e) {
+    container.innerHTML = '<div class="feed-loading">Feed temporarily unavailable. <a href="https://reddit.com/r/' + SUBREDDIT + '" target="_blank">Visit r/' + SUBREDDIT + '</a></div>';
+  }
+}
+loadRedditFeed();
+feedTimer = setInterval(loadRedditFeed, 10000);
+
+// ============================================================
+// Email Capture (Firebase)
+// ============================================================
+async function submitEmail() {
+  const email = document.getElementById("email-input").value.trim();
+  if (!email || !email.includes("@")) return alert("Please enter a valid email.");
+  try {
+    await fetch(FIREBASE_DB + "/subscribers/" + SITE_KEY + ".json", {
+      method: "POST",
+      body: JSON.stringify({ email: email, date: new Date().toISOString(), source: "plush.wiki" })
+    });
+    document.getElementById("email-success").style.display = "block";
+    document.getElementById("email-input").value = "";
+  } catch(e) {
+    alert("Subscription failed. Please try again.");
+  }
+}
+
+// ============================================================
+// Spin Wheel
+// ============================================================
+const PRIZES = ["10% OFF", "FREE SHIPPING", "BONUS ENTRY", "20% OFF", "SPIN AGAIN", "JACKPOT!"];
+let spinning = false;
+
+function openSpin() {
+  const lastSpin = localStorage.getItem("plush-wiki_lastSpin");
+  const today = new Date().toDateString();
+  if (lastSpin === today) {
+    alert("You already spun today! Come back tomorrow.");
+    return;
+  }
+  document.getElementById("spin-overlay").classList.add("show");
+  document.getElementById("spin-result").style.display = "none";
+  document.getElementById("spin-btn").style.display = "inline-block";
+}
+
+function closeSpin() {
+  document.getElementById("spin-overlay").classList.remove("show");
+}
+
+function doSpin() {
+  if (spinning) return;
+  spinning = true;
+  const wheel = document.getElementById("spin-wheel");
+  const degrees = Math.floor(Math.random() * 360) + 1440;
+  wheel.style.transform = "rotate(" + degrees + "deg)";
+  document.getElementById("spin-btn").style.display = "none";
+
+  setTimeout(() => {
+    const prize = PRIZES[Math.floor(Math.random() * PRIZES.length)];
+    const resultEl = document.getElementById("spin-result");
+    resultEl.textContent = prize;
+    resultEl.style.display = "block";
+    localStorage.setItem("plush-wiki_lastSpin", new Date().toDateString());
+    spinning = false;
+
+    // Log to Firebase
+    fetch(FIREBASE_DB + "/spins/" + SITE_KEY + ".json", {
+      method: "POST",
+      body: JSON.stringify({ prize: prize, date: new Date().toISOString() })
+    }).catch(() => {});
+  }, 4200);
+}
+
+// ============================================================
+// Tip Modal
+// ============================================================
+function openTip() {
+  document.getElementById("tip-overlay").classList.add("show");
+}
+function closeTip() {
+  document.getElementById("tip-overlay").classList.remove("show");
+}
+function copyTip() {
+  navigator.clipboard.writeText("bc1pkepg42ctsvsxk499qu02qqyyz88gwjchnjpsu22wmng9rhpfv3jqw2t2hm").then(() => {
+    const el = document.getElementById("tip-addr");
+    const orig = el.querySelector(".tip-copy-hint").textContent;
+    el.querySelector(".tip-copy-hint").textContent = "Copied!";
+    setTimeout(() => el.querySelector(".tip-copy-hint").textContent = orig, 2000);
+  });
+}
+
+// ============================================================
+// Rental-specific JS (claw.rentals only)
+// ============================================================
+
+
+// Share on X
+function shareOnX() {
+  const text = encodeURIComponent("Check out Plush.Wiki! The plush toy encyclopedia. History, brands, collecting guides, and identification.");
+  const url = encodeURIComponent("https://plush.wiki/");
+  window.open("https://twitter.com/intent/tweet?text=" + text + "&url=" + url, "_blank");
+}
+</script>
+</body>
+</html>
